@@ -63,15 +63,15 @@ import { ModalDialogHeaderType } from './modal-dialog.header-type';
       }
   `],
   template: `
-    <div *ngIf="settings.overlayClass && showOverlay" [ngClass]="[settings.overlayClass, animateOverlayClass]"></div> 
+    <div *ngIf="settings.overlayClass && showOverlay" [ngClass]="[settings.overlayClass, animateOverlayClass]"></div>
     <div [ngClass]="[settings.modalClass, animateModalClass]" #dialog>
       <div [ngClass]="settings.modalDialogClass">
         <div [ngClass]="[ showAlert ? settings.alertClass : '', settings.contentClass]">
           <div [ngClass]="settings.headerClass">
-            <div [ngClass]="settings.headerTitleClass">
-              <ng-template ad-header></ng-template>
-              <h4 *ngIf="settings.headerType === 1">{{title}}</h4>
+            <div [ngClass]="settings.headerTitleClass" *ngIf="settings.headerType === 1; else customHeader">
+              <h4>{{title}}</h4>
             </div>
+            <ng-template #customHeader ad-header></ng-template>
             <button (click)="close()" *ngIf="!actionButtons || !actionButtons.length" type="button"
                     [title]="settings.closeButtonTitle"
                     [ngClass]="settings.closeButtonClass">
