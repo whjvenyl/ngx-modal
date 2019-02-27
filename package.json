@@ -1,6 +1,6 @@
 {
   "name": "ngx-modal-dialog-custom",
-  "version": "3.0.0-custom.1",
+  "version": "3.0.0-custom.4",
   "description": "Dynamic modal dialog for Angular",
   "scripts": {
     "test": "karma start",
@@ -21,8 +21,8 @@
   "author": "Miroslav Jonas",
   "license": "MIT",
   "engines": {
-    "node": ">=8.9.1 <9.0.0",
-    "yarn": ">=1.3.2 <2.0.0"
+    "node": ">=8.9.1",
+    "yarn": ">=1.3.2"
   },
   "bugs": {
     "url": "https://github.com/whjvenyl/ngx-modal/issues"

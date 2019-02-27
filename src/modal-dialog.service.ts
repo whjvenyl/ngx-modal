@@ -29,4 +29,8 @@ export class ModalDialogService {
 
     this.modalDialogInstanceService.saveExistingModalDialog(componentRef);
   }
+
+  getInstanceService() {
+    return this.modalDialogInstanceService;
+  }
 }
